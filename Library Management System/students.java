@@ -87,7 +87,7 @@ public class students {
 			System.out.println("checking out");
 
 			book.showAllBooks();
-			book b = book.checkOutBook();
+			ReadingMaterial b = book.checkOutBook();
 
 			System.out.println("checking out");
 			if (b != null) {
@@ -131,9 +131,9 @@ public class students {
 			for (int i = 0; i < s.booksCount; i++) {
 
 				System.out.println(
-					s.borrowedBooks[i].sNo + "\t\t\t"
-					+ s.borrowedBooks[i].bookName + "\t\t\t"
-					+ s.borrowedBooks[i].authorName);
+					s.borrowedBooks[i].getSNo() + "\t\t\t"
+					+ s.borrowedBooks[i].getBookName() + "\t\t\t"
+					+ s.borrowedBooks[i].getAuthorName());
 			}
 
 			// Display message only
@@ -143,7 +143,7 @@ public class students {
 			int sNo = input.nextInt();
 
 			for (int i = 0; i < s.booksCount; i++) {
-				if (sNo == s.borrowedBooks[i].sNo) {
+				if (sNo == s.borrowedBooks[i].getSNo()) {
 					book.checkInBook(s.borrowedBooks[i]);
 					s.borrowedBooks[i] = null;
 
