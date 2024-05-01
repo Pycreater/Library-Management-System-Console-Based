@@ -11,7 +11,7 @@ public class student {
 	String studentName;
 	String regNum;
 
-	book borrowedBooks[] = new book[3];
+	ReadingMaterial borrowedBooks[] = new ReadingMaterial[3];
 	public int booksCount = 0;
 
 	// Creating object of Scanner class to
